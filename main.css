@@ -1,0 +1,53 @@
+/* 全体の基本スタイル */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* メインコンテンツ */
+main {
+  padding: 20px;
+}
+
+/* ギャラリー画像 */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* セクション見出し */
+section h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+/* フッター */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
