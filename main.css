@@ -104,6 +104,10 @@ footer{
    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
 }
 
+.nav-list{
+list-style: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
    nax ul {
