@@ -207,20 +207,18 @@
     </footer>
  <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // アコーディオン機能
             const accordionHeaders = document.querySelectorAll('.accordion-header');
-
             accordionHeaders.forEach(header => {
                 header.addEventListener('click', function() {
-                    const content = this.nextElementSibling; // 次の要素がコンテンツ
+                    const content = this.nextElementSibling;
                     const icon = this.querySelector('.accordion-icon');
 
-                    // クリックされたアイテムの開閉を切り替える
                     if (content.style.maxHeight) {
-                        content.style.maxHeight = null; // 閉じる
+                        content.style.maxHeight = null;
                         icon.classList.remove('fa-chevron-up');
                         icon.classList.add('fa-chevron-down');
                     } else {
-                        // 他の開いているアコーディオンを閉じる (オプション)
                         document.querySelectorAll('.accordion-content').forEach(item => {
                             if (item !== content && item.style.maxHeight) {
                                 item.style.maxHeight = null;
@@ -228,15 +226,34 @@
                                 item.previousElementSibling.querySelector('.accordion-icon').classList.add('fa-chevron-down');
                             }
                         });
-
-                        content.style.maxHeight = content.scrollHeight + "px"; // 開く
+                        content.style.maxHeight = content.scrollHeight + "px";
                         icon.classList.remove('fa-chevron-down');
                         icon.classList.add('fa-chevron-up');
                     }
                 });
             });
+
+            // フェードインアニメーション
+            const fadeInSections = document.querySelectorAll('.fade-in');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // 10%が見えたら発動
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); // 一度表示されたら監視を停止
+                    }
+                });
+            }, observerOptions);
+
+            fadeInSections.forEach(section => {
+                observer.observe(section);
+            });
         });
     </script>
-
 </body>
 </html>
