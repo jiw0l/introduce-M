@@ -1,231 +1,417 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大阪公立大学工業高等専門学校　エネルギー機械コース紹介</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <header>
-        <h1>大阪公立大学工業高等専門学校<br>エネルギー機械コース</h1>
-        <p>未来を動かすエネルギーと機械のプロフェッショナルを育成する</p>
-    </header>
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7; /* 行の高さを少し広げ、読みやすく */
+    margin: 0;
+    padding: 0;
+    background-color: #fcf6f7; /* 非常に薄い赤系の背景 */
+    color: #333;
+    scroll-behavior: smooth; /* スムーズスクロール */
+}
 
-<nav>
-      <ul>
-            <li><a href="#about"><i class="fas fa-info-circle"></i> コース概要</a></li>
-            <li><a href="#features"><i class="fas fa-flask"></i> 学習内容</a></li>
-            <li><a href="#curriculum"><i class="fas fa-book"></i> カリキュラム</a></li>
-            <li><a href="#facilities"><i class="fas fa-building"></i> 施設紹介</a></li>
-            <li><a href="#faq"><i class="fas fa-question-circle"></i> よくある質問</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
-        </ul>
-</nav>
+/* Header Styles */
+header {
+    background-color: #dc3545; /* 強めの赤 */
+    color: white;
+    padding: 2.5rem 0; /* 上下の余白を増やす */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 影を強調 */
+    position: relative; /* 背景に図形などを重ねる場合のため */
+    overflow: hidden; /* 子要素がはみ出るのを防ぐ */
+}
 
-    <main>
-        <section id="about" class="fade-in">
-            <h2><i class="fas fa-lightbulb"></i> エネルギー機械コースとは</h2>
-            <div class="content-wrapper">
-                <div class="text-content">
-                    <p>大阪公立大学工業高等学校エネルギー機械コースは、持続可能な社会の実現に不可欠なエネルギー技術と、それを支える機械工学の知識・技術を深く学ぶコースです。環境に配慮した次世代エネルギーの開発から、様々な産業を動かす高性能な機械の設計・製造・運用まで、幅広い分野で活躍できる人材を育成します。</p>
-                    <p>現代社会が直面するエネルギー問題に対し、理論と実践を組み合わせた教育を通して、解決策を探求する力を養います。中学生の皆さん、未来の地球と産業を支える技術を私たちと一緒に学びませんか？</p>
-                    <p>【ここにコースの理念や、他コースとの違いなどの詳細を追加してください。】</p>
-                </div>
-                <div class="image-content">
-                    <img src="images/course_overview.jpg" alt="コース概要イメージ" class="responsive-img">
-                    <p class="caption">
-                          </div>
-            </div>
-        </section>
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        <section id="features" class="fade-in">
-            <h2><i class="fas fa-cogs"></i> このコースで学ぶこと</h2>
-            <div class="cards-container">
-                <div class="card hover-effect">
-                    <div class="card-icon"><i class="fas fa-atom"></i></div>
-                    <h3>エネルギー技術の基礎</h3>
-                    <p>太陽光、風力、水力といった再生可能エネルギーや、火力、原子力などの基礎を学び、それぞれの特性や社会での役割を理解します。</p>
-                </div>
-                <div class="card hover-effect">
-                    <div class="card-icon"><i class="fas fa-tools"></i></div>
-                    <h3>実践的な機械設計・製造</h3>
-                    <p>CAD/CAMシステムを用いた機械設計や、旋盤、フライス盤などの工作機械操作を通じて、設計から製造までの一連の流れを体験します。</p>
-                </div>
-                <div class="card hover-effect">
-                    <div class="card-icon"><i class="fas fa-water"></i></div>
-                    <h3>流体・熱力学の応用</h3>
-                    <p>水や空気の流れ、熱の動きに関する物理法則を学び、ポンプやタービン、エンジンなどの機械の効率を最大化する技術を探求します。</p>
-                </div>
-                <div class="card hover-effect">
-                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>電気・制御の基礎</h3>
-                    <p>機械を動かすための電気回路や、自動制御の基本的な仕組みを学び、メカトロニクス技術への理解を深めます。</p>
-                </div>
-                <div class="card hover-effect">
-                    <div class="card-icon"><i class="fas fa-car-battery"></i></div>
-                    <h3>次世代モビリティ技術</h3>
-                    <p>EV（電気自動車）やFCV（燃料電池自動車）など、環境に優しい自動車技術の構造や原理を学び、未来の交通システムを考えます。</p>
-                </div>
-                <div class="card hover-effect">
-                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>ロケット・宇宙工学の入口</h3>
-                    <p>宇宙を目指すロケットの推進原理や構造についても触れ、広がる機械工学の可能性を体感します。</p>
-                </div>
-            </div>
-        </section>
-  <section id="curriculum" class="fade-in">
-            <h2><i class="fas fa-calendar-alt"></i> カリキュラムの概要</h2>
-            <p>エネルギー機械コースで学ぶ主な科目と、その学習内容の例です。皆さんの興味を広げる多様な科目が用意されています。</p>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>科目名</th>
-                            <th>主な学習内容</th>
-                            <th>関連する分野</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>機械設計</td>
-                            <td>CADを用いた機械部品の設計、製図法、材料の選定</td>
-                            <td>製造業、自動車、航空宇宙</td>
-                        </tr>
-                        <tr>
-                            <td>エネルギー変換</td>
-                            <td>熱機関、発電システム、再生可能エネルギーの原理</td>
-                            <td>電力、環境、新エネルギー</td>
-                        </tr>
-                        <tr>
-                            <td>流体工学</td>
-                            <td>ポンプ、タービン、配管システムにおける流体の挙動</td>
-                            <td>プラント、水処理、空調</td>
-                        </tr>
-                        <tr>
-                            <td>工作実習</td>
-                            <td>旋盤、フライス盤、溶接などの基礎的な機械加工技術</td>
-                            <td>ものづくり、生産技術</td>
-                        </tr>
-                        <tr>
-                            <td>ロボット工学入門</td>
-                            <td>ロボットの仕組み、プログラミング、自動化技術</td>
-                            <td>FA、AI、サービスロボット</td>
-                        </tr>
-                        <tr>
-                            <td>工業技術基礎</td>
-                            <td>工業高校で学ぶ基礎知識、安全作業、測定技術</td>
-                            <td>全ての工業分野</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        <section id="facilities" class="fade-in">
-            <h2><i class="fas fa-wrench"></i> 充実した施設と設備</h2>
-            <div class="content-wrapper reverse">
-                <div class="text-content">
-                    <p>エネルギー機械コースでは、最新の設備が整った実習室で、実践的な学びを深めることができます。</p>
-                    <ul>
-                        <li><strong>実習工場:</strong> 旋盤、フライス盤、溶接機など、様々な工作機械を安全に操作し、部品加工の技術を習得します。</li>
-                        <li><strong>熱エネルギー実験室、流体工学実験室など:</strong> 太陽光発電、風力発電の小型モデルや、エンジンの性能測定装置などを使い、エネルギー変換の原理を実験を通じて理解します。</li>
-                        <li><strong>CAD、CAE室:</strong> パソコンと最新ソフトウェアを用いて、機械部品の設計や加工プログラムの作成を行います。</li>
-                    </ul>
-<strong>進路・進学先の例</strong>
+header h1 {
+    margin: 0;
+    font-size: 3.2em; /* フォントサイズを大きく */
+    letter-spacing: 2px; /* 文字間隔を広げる */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 文字に影 */
+}
 
-<li>重工業系：IHI、三菱重工</li>
-<li>乗り物系：JAL、JR、本田技研工業</li>
-<li>エネルギー・化学系：大阪ガス、旭化成</li>
-<li>大阪公立大学機械工学科・航空宇宙工学・海洋システム、技科大学、大阪大学、神戸大学
-                </section>
-           
-            <img src="3M-33_2A.jpg" alt="コースのイメージ写真" style="max-width:60%; height:auto;">
-            
-        </section>
+header p {
+    font-size: 1.4em; /* フォントサイズを大きく */
+    margin-top: 10px;
+}
 
-        <section id="faq" class="fade-in">
-            <h2><i class="fas fa-question-circle"></i> よくある質問</h2>
-            <div class="accordion-container">
-                <div class="accordion-item">
-                    <button class="accordion-header">Q: どのような資格取得をサポートしていますか？ <i class="fas fa-chevron-down accordion-icon"></i></button>
-                    <div class="accordion-content">
-                        <p>A: コースでは、以下の資格取得を積極的にサポートしています。</p>
-                        <ul>
-                            <li>危険物取扱者（乙種）</li>
-                            <li>ボイラー技士</li>
-                            <li>機械加工技能検定</li>
-                            <li>CAD利用技術者試験</li>
-                        </ul>
-                        <p>これらの資格は、将来の進路において大きな強みとなります。</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-header">Q: 卒業後の進路はどのようなものがありますか？ <i class="fas fa-chevron-down accordion-icon"></i></button>
-                    <div class="accordion-content">
-                        <p>A: 卒業生は、多岐にわたる分野で活躍しています。主な進路は以下の通りです。</p>
-                        <ul>
-                            <li><strong>大学・専門学校進学:</strong> 機械工学、電気電子工学、環境工学系など</li>
-                            <li><strong>就職:</strong> 自動車メーカー、重工業、電力会社、プラント建設、機械部品製造、再生可能エネルギー関連企業など</li>
-                        </ul>
-                        <p>毎年、多くの生徒が希望する進路を実現しています。</p>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <button class="accordion-header">Q: 機械の知識が全くなくても大丈夫ですか？ <i class="fas fa-chevron-down accordion-icon"></i></button>
-                    <div class="accordion-content">
-                        <p>A: はい、全く問題ありません！本コースでは、機械やエネルギーに関する基礎から丁寧に指導します。実習を通して実際に手を動かしながら学ぶ機会も多いので、理科やものづくりに興味があれば、誰でも楽しく学ぶことができます。最初は知識がなくても、先輩や先生がサポートしますのでご安心ください。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+/* Navigation Styles */
+nav {
+    background-color: #343a40; /* 濃い灰色 */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky; /* スクロールしても追従 */
+    top: 0;
+    z-index: 1000; /* 他の要素の上に表示 */
+}
 
-        <section id="contact"class="fade-in">
-     <h2><i class="fas fa-envelope"></i> お問い合わせ</h2>
-            <p>大阪公立大学工業高等学校 エネルギー機械コースに興味をお持ちいただきありがとうございます。ご不明な点やご質問がありましたら、お気軽にお問い合わせください。</p>
-            <div class="contact-info">
-                <p><i class="fas fa-phone-alt"></i> 電話: 000-0000-0000 (代表)</p>
-                <p><i class="fas fa-fax"></i> FAX: 000-0000-0000</p>
-                <p><i class="fas fa-at"></i> メール: <a href="mailto:info@omu-kougyo.ac.jp">info@omu-kougyo.ac.jp</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> 住所: 〒572-XXXX 大阪府寝屋川市XXXXXXX</p>
-            </div>
-  
-        </section>
-    </main>
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 小さい画面で折り返す */
+}
 
-    <footer>
-        <p> 2025　大阪公立大学工業高等専門学校　エネルギー機械コース</p>
-    </footer>
- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
+nav ul li {
+    margin: 0 18px; /* 左右の余白を少し増やす */
+}
 
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', function() {
-                    const content = this.nextElementSibling; // 次の要素がコンテンツ
-                    const icon = this.querySelector('.accordion-icon');
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; /* パディングを増やす */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* ホバーアニメーション */
+    display: flex; /* アイコンとテキストを横並びにする */
+    align-items: center;
+    border-radius: 5px;
+}
 
-                    // クリックされたアイテムの開閉を切り替える
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null; // 閉じる
-                        icon.classList.remove('fa-chevron-up');
-                        icon.classList.add('fa-chevron-down');
-                    } else {
-                        // 他の開いているアコーディオンを閉じる (オプション)
-                        document.querySelectorAll('.accordion-content').forEach(item => {
-                            if (item !== content && item.style.maxHeight) {
-                                item.style.maxHeight = null;
-                                item.previousElementSibling.querySelector('.accordion-icon').classList.remove('fa-chevron-up');
-                                item.previousElementSibling.querySelector('.accordion-icon').classList.add('fa-chevron-down');
-                            }
-                        });
+nav ul li a i {
+    margin-right: 8px; /* アイコンとテキストの間隔 */
+}
 
-                        content.style.maxHeight = content.scrollHeight + "px"; // 開く
-                        icon.classList.remove('fa-chevron-down');
-                        icon.classList.add('fa-chevron-up');
-                    }
-                });
-            });
-        });
-    </script>
+nav ul li a:hover {
+    background-color: #575757;
+    transform: translateY(-3px); /* 少し上に動く */
+}
 
-</body>
-</html>
+/* Main Content Styles */
+main {
+    padding: 30px 20px; /* パディングを増やす */
+    max-width: 1000px; /* 最大幅を少し広げる */
+    margin: 30px auto; /* 上下の余白を増やす */
+    background-color: white;
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 影を強調 */
+}
+
+section {
+    margin-bottom: 40px; /* 下の余白を増やす */
+    padding: 25px; /* パディングを増やす */
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* セクションごとの軽い影 */
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #dc3545; /* 強めの赤 */
+    font-size: 2.5em; /* フォントサイズを大きく */
+    border-bottom: 3px solid #dc3545; /* 下線を強調 */
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center; /* 見出しを中央揃え */
+}
+
+h2 i {
+    margin-right: 10px; /* 見出しのアイコンとテキストの間隔 */
+}
+
+/* Content Wrapper for Text and Image */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* 要素間の隙間 */
+    margin-top: 20px;
+}
+
+.content-wrapper.reverse {
+    flex-direction: row-reverse; /* 画像とテキストの順序を反転 */
+}
+
+.text-content {
+    flex: 1; /* 利用可能なスペースを占める */
+    line-height: 1.8;
+}
+
+.image-content {
+    flex: 0 0 40%; /* 画像の幅を固定 */
+    text-align: center;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Cards Container (学ぶことセクション) */
+.cards-container {
+    display: grid; /* グリッドレイアウト */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* レスポンシブなカラム */
+    gap: 25px; /* カード間の隙間 */
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ホバーアニメーション */
+}
+
+.card.hover-effect:hover {
+    transform: translateY(-8px); /* 少し上に動く */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* 影を濃くする */
+}
+
+.card-icon {
+    font-size: 3.5em; /* アイコンサイズ */
+    color: #dc3545; /* 赤色 */
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Table Styles (カリキュラムセクション) */
+.table-container {
+    overflow-x: auto; /* テーブルがはみ出た場合にスクロール */
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #dc3545; /* ヘッダーの背景色を赤に */
+    color: white;
+    font-weight: bold;
+    white-space: nowrap; /* テキストが途中で改行されないように */
+}
+
+table tr:nth-child(even) {
+    background-color: #fcebeb; /* 偶数行の背景色を薄い赤に */
+}
+
+table tr:hover {
+    background-color: #f7e0e0; /* ホバー時の背景色を少し濃い赤に */
+}
+
+/* Accordion (FAQセクション) */
+.accordion-container {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 18px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #ebebeb;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0; /* 初期状態で非表示 */
+    padding: 0 25px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* 開閉アニメーション */
+    background-color: #fff;
+    line-height: 1.7;
+}
+
+.accordion-content p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.accordion-content ul {
+    margin-bottom: 15px;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #dc3545; /* アイコンを赤に */
+}
+
+.contact-info a {
+    color: #dc3545;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #b02a37; /* ホバー時の色を少し濃く */
+    text-decoration: underline;
+}
+
+.map-placeholder {
+    background-color: #e9ecef;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 30px;
+    color: #6c757d;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #343a40; /* 濃い灰色 */
+    color: white;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column; /* 縦並びにする */
+        gap: 20px;
+    }
+    .content-wrapper.reverse {
+        flex-direction: column; /* 縦並びにする */
+    }
+    .image-content {
+        flex: 0 0 auto; /* 幅の固定を解除 */
+        width: 100%; /* 全幅に */
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+    main {
+        margin: 15px auto;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.8em;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .card {
+        padding: 20px;
+    }
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .accordion-header {
+        padding: 15px 20px;
+        font-size: 1em;
+    }
+    .accordion-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    header p {
+        font-size: 0.9em;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .cards-container {
+        grid-template-columns: 1fr; /* 1カラムにする */
+    }
+    section {
+        padding: 15px;
+    }
+}
+
+/* フェードインアニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* JavaScriptでスクロール時に .show クラスを追加 */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
